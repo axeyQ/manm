@@ -18,7 +18,8 @@ const eslintConfig = [
       next: nextPlugin
     },
     rules: {
-      'next/core-web-vitals': 'error'
+      'next/no-html-link-for-pages': 'error',
+      'next/no-img-element': 'error'
     }
   }
 ];
