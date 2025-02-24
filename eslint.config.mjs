@@ -11,17 +11,13 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
-const eslintConfig = [
+export default [
   js.configs.recommended,
   {
+    files: ['**/*.{js,jsx,ts,tsx}'],
     plugins: {
       next: nextPlugin
     },
-    rules: {
-      'next/no-html-link-for-pages': 'error',
-      'next/no-img-element': 'error'
-    }
+    rules: nextPlugin.configs['recommended'].rules
   }
 ];
-
-export default eslintConfig;
